@@ -14,21 +14,15 @@ export async function POST(request: Request) {
 	let user;
 
 	if (dev) {
-		console.log('dev');
 		user = DUMMY_USER_INFOS;
-		/* user = await prisma.appUsers.findFirst({
-			where: {
-				email: body.username,
-			},
-		}); */
 	} else {
+		console.log('production');
 		user = await prisma.appUsers.findFirst({
 			where: {
 				email: body.username,
 			},
 		});
 	}
-	console.log('login ==>', user);
 	if (user && (await bcrypt.compare(body.password, user.password))) {
 		const { password, ...userWithoutPass } = user;
 		const accessToken = signJwtAccessToken(userWithoutPass);

@@ -2,6 +2,7 @@ import prisma from '@/app/functions/prisma';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+	console.log('coordinates ...');
 	try {
 		const mapData = await prisma.appdata.findMany({
 			select: {
