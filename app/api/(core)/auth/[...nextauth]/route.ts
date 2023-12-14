@@ -22,16 +22,13 @@ const handler = NextAuth({
 				let url;
 
 				if (prod) {
-					console.log('production !!');
 					const baseUrl = new URL(
 						req.headers['x-forwarded-proto'] +
 							'://' +
 							process.env.NEXT_PUBLIC_URI,
 					);
 					url = new URL('/api/login', baseUrl);
-					console.log('==>', url);
 				} else {
-					console.log('developement !!');
 					url = new URL('/api/login', process.env.NEXTAUTH_URL);
 				}
 
@@ -48,10 +45,8 @@ const handler = NextAuth({
 					});
 					const user = await res.json();
 					if (user) {
-						console.log('==>', user);
 						return user;
 					} else {
-						console.log('>==', user);
 						return null;
 					}
 				} catch (error) {
