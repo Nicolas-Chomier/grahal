@@ -9,6 +9,7 @@ if (DEV) {
 	API_BASE_URL = 'http://localhost:3000';
 } else {
 	API_BASE_URL = process.env.NEXT_PUBLIC_URI;
+	console.log('Mode production url = ', API_BASE_URL);
 }
 
 //* APPLICATION MAIN URL
