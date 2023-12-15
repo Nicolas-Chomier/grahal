@@ -106,11 +106,6 @@ export default LandingPage;
 //
 const fetchAllCoordinates = async () => {
 	const response = await fetch(PROJECT_API_ROUTES.GET_ALL_COORDINATES, {});
-	console.log('response', response);
-	console.log(
-		'PROJECT_API_ROUTES.GET_ALL_COORDINATES',
-		PROJECT_API_ROUTES.GET_ALL_COORDINATES,
-	);
 	if (!response.ok) {
 		throw new Error('Network response was not ok');
 	}

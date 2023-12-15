@@ -17,8 +17,8 @@ export const URL = API_BASE_URL;
 
 //* ADMIN PANEL END POINTS
 export const API_ROUTES = {
-	GET_ALL_USER: `${API_BASE_URL}/api/admin/getAllUser`,
-	DELETE_USER_ID: `${API_BASE_URL}/api/admin/deleteUser`,
-	ADD_USER: `${API_BASE_URL}/api/admin/addUser`,
-	CHANGE_PASSWORD: `${API_BASE_URL}/api/admin/changePassword`,
+	GET_ALL_USER: `/api/admin/getAllUser`,
+	DELETE_USER_ID: `/api/admin/deleteUser`,
+	ADD_USER: `/api/admin/addUser`,
+	CHANGE_PASSWORD: `/api/admin/changePassword`,
 };
