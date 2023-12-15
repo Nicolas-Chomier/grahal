@@ -30,6 +30,10 @@ type TGrahalMapProps = {
 const Paris: [number, number] = [48.866669, 2.333333];
 const coefWidth = 1;
 const coefHeight = 0.8;
+const colors = {
+	default: { light: '#5b5bd6', dark: '#272962' },
+	focus: { light: '#29A383', dark: '#208368' },
+};
 
 export const GrahalMap = ({
 	coordinates,
@@ -61,9 +65,13 @@ export const GrahalMap = ({
 				{coordinates.map((item, index) => {
 					const lat = item?.lat;
 					const lon = item?.lon;
-					let color = isDarkMode ? '#2c2e6d' : '#7b61ff';
+					let color = isDarkMode
+						? colors.default.dark
+						: colors.default.light;
 					if (focus && lat === focus[0]) {
-						color = '#29A383';
+						color = isDarkMode
+							? colors.focus.dark
+							: colors.focus.light;
 					}
 					if (lat && lon) {
 						const name = item?.name;

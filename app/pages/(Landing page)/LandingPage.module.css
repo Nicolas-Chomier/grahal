@@ -32,37 +32,38 @@
 
 @media (min-width: 300px) {
 	.panel_top {
-		margin: 3.8vh 0;
+		margin: 1vh 0;
 	}
 	.title {
 		font-size: 140%;
+		margin-bottom: 0.8vh;
 	}
 	.middle_component {
-		top: 24vh;
+		top: 10vh;
 	}
 }
 
 @media (min-width: 600px) {
 	.panel_top {
-		margin: 1.8vh 0;
+		margin: 2.1vh 0;
 	}
 	.title {
-		font-size: 190%;
+		font-size: 200%;
 	}
 	.middle_component {
-		top: 15vh;
+		top: 15.7vh;
 	}
 }
 
 @media (min-width: 1024px) {
 	.panel_top {
-		margin: 2vh 0;
+		margin: 2.2vh 0;
 	}
 	.title {
-		font-size: 240%;
+		font-size: 250%;
 	}
 	.middle_component {
-		top: 16.8vh;
+		top: 16vh;
 	}
 }
 

@@ -36,9 +36,9 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
 	const { isDarkMode } = setDarkMode();
 	return (
 		<main
-			className={`${
-				isDarkMode ? 'dark_background' : 'light_background'
-			} ${customFont.className}`}
+			className={`${isDarkMode ? 'dark-theme' : ''} ${'background'} ${
+				customFont.className
+			}`}
 		>
 			<div>{children}</div>
 			<GrahalFooter />

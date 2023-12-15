@@ -1,17 +1,4 @@
-.light_background {
+.background {
 	height: 100vh;
-	background: #7b61ff;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	z-index: -99;
-}
-
-.dark_background {
-	height: 100vh;
-	background: #272962;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	z-index: -99;
+	background: var(--accent-color);
 }
