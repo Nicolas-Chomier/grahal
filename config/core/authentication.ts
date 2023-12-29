@@ -12,10 +12,11 @@ if (DEV) {
 		password: 'master',
 	};
 } else {
-	MASTER_LOGIN = {
+	console.log('Log...');
+	/* MASTER_LOGIN = {
 		email: 'master@gmail.com',
 		password: 'master',
-	};
+	}; */
 }
 
 export const DEFAULT_USER = MASTER_LOGIN;

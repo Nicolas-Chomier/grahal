@@ -28,7 +28,6 @@ const handler = NextAuth({
 							process.env.NEXT_PUBLIC_URI,
 					);
 					url = new URL('/api/login', baseUrl);
-					console.log('=======', url);
 				} else {
 					url = new URL('/api/login', process.env.NEXTAUTH_URL);
 				}
